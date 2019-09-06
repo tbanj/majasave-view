@@ -1,0 +1,11 @@
+@media (max-width: 600px) {
+  .page-content section {
+    padding: 10px;
+  }
+  .page-content .card {
+    padding: 10px;
+  }
+}
+body {
+  font-family: "Varela Round", sans-serif;
+}
