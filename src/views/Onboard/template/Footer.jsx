@@ -6,69 +6,9 @@ class Footer extends Component {
       <footer className="content">
         <div className="container">
           <ul className="_right foot-links">
-            <h3>COMPANY</h3>
-            <li>
-              <a href="/about">About</a>
-            </li>
 
-            <li>
-              <a href="/faq">FAQs</a>
-            </li>
-            <li>
-              <a href="/terms">Terms of Use</a>
-            </li>
-            <li>
-              <a href="/about">Privacy Policy</a>
-            </li>
-            <li>
-              <span className="icon">
-                <a href="https://www.facebook.com/aolabanji"  >
-                  <i
-                    id="social-fb"
-                    className="fa fa-facebook-square fa-3x social"
-                  />
-                </a>
-              </span>
-
-              <span className="icon">
-                <a href="https://twitter.com/AlabiTemitopeW1" >
-                  <i
-                    id="social-tw"
-                    className="fa fa-twitter-square fa-3x social"
-                  />
-                </a>
-              </span>
-
-              <span className="icon">
-                <a
-                  href="https://www.linkedin.com/in/alabi-temitope-aa036b103"
-
-                >
-                  <i id="social-gp" className="fa fa-linkedin fa-3x social" />
-                </a>
-              </span>
-            </li>
           </ul>
 
-          <ul className="_right foot-links">
-            <h3>Quick Links</h3>
-            <li>
-              <a href="https://github.com/tbanj">AutoSave™</a>
-            </li>
-
-            <li>
-              <a href="https://github.com/tbanj">Quick Save™</a>
-            </li>
-            <li>
-              <a href="https://github.com/tbanj">SafeLock™</a>
-            </li>
-            <li>
-              <a href="https://github.com/tbanj">Withdrawals</a>
-            </li>
-            <li>
-              <a href="https://github.com/tbanj">Salary Management</a>
-            </li>
-          </ul>
 
           <div className="info">
             {/* <a href="#" ></a> */}
@@ -95,10 +35,10 @@ class Footer extends Component {
                 </span>
               </a>
             </p>
-            <p className="copy">© 2016 - 2019 Majasave Limited - RC 2515897</p>
+            <p className="copy">© 2019 Majasave Limited - RC 2515897</p>
           </div>
         </div>
-      </footer>
+      </footer >
     );
   }
 }

@@ -142,7 +142,7 @@ class AdminRegister extends Component {
 
             setTimeout(() => {
                 this.props.history.push(res.data['url']);
-            }, 4000);
+            }, 500);
             getNotify.successNotification("", res.data['message']);
 
         } catch (err) {

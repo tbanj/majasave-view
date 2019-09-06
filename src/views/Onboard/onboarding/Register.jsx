@@ -135,7 +135,7 @@ class Register extends Component {
 			setTimeout(() => {
 				getNotify.successNotification("", res.data['message']);
 				this.props.history.push(res.data['url']);
-			}, 1000);
+			}, 500);
 
 
 		} catch (err) {

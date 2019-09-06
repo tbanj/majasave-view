@@ -79,7 +79,7 @@ class Login extends Component {
 			console.log(res.data['message']);
 			setTimeout(() => {
 				this.props.history.push(res.data["url"]);
-			}, 4000);
+			}, 500);
 
 			getNotify.successNotification("", res.data["message"]);
 			const token = res.data.data.token;

@@ -46,7 +46,7 @@ class Verify extends Component {
         const res = await axios.post(`${env.api}/user/verify`, detail);
         setTimeout(() => {
           this.props.history.push(res.data["url"]);
-        }, 4000);
+        }, 500);
         getNotify.successNotification("", res.data["message"]);
 
       } catch (err) {
