@@ -1,8 +1,7 @@
 {
-  "name": "Alabi",
+  "name": "majasave",
+  "version": "0.1.0",
   "description": "This is a dashboard use to practice react knowledge",
-  "author": "Alabi Temitope",
-  "homepage": "https://www.linkedin.com/in/alabi-temitope-aa036b103",
   "copyright": "Copyright 2017-2019",
   "license": "MIT",
   "private": true,
