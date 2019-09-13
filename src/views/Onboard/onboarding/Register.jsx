@@ -47,36 +47,58 @@ class Register extends Component {
 	componentWillMount() {
 	}
 
-	async componentDidMount() {
-		const referral = await this.handleGetReferral();
-		if (getReferralItem.getItemsFromStorage().length > 0 && referral === undefined) {
-			this.setState({ referral_list: getReferralItem.getItemsFromStorage() });
-		}
-		if (referral !== undefined && referral.length > getReferralItem.getItemsFromStorage().length) {
-			this.setState({ referral_list: referral });
-			getReferralItem.storeItem(this.state.referral_list);
-		}
-
-		if (referral !== undefined && referral.length === getReferralItem.getItemsFromStorage().length) {
-			this.setState({ referral_list: getReferralItem.getItemsFromStorage() });
-		}
-
-	}
-
-
 	async handleGetReferral() {
 		try {
 			const res = await axios.get(`${env.api}/misc/get-audiences`);
+			console.log(res);
+
 			if (res.data) {
 				console.log(res.data.data);
 
 				const referral_list = res.data.data;
-				return referral_list;
+				if (referral_list) {
+					if (getReferralItem.getItemsFromStorage().length > 0) {
+						this.setState({ referral_list: getReferralItem.getItemsFromStorage() });
+					}
+					else {
+						this.setState({ referral_list: referral_list });
+						getReferralItem.storeItem(this.state.referral_list);
+					}
+				}
 			}
 		} catch (err) {
 			console.log('An error occured');
 		}
 	}
+
+	componentDidMount() {
+		this.handleGetReferral();
+
+	}
+
+
+
+
+
+	// async handleGetReferral() {
+	// 	try {
+	// 		const res = await axios.get(`${env.api}/misc/get-audiences`);
+	// 		if (res.data) {
+	// 			console.log(res.data.data);
+
+	// 			const referral_list = res.data.data;
+	// 			// return referral_list;
+
+	// 			if (getReferralItem.getItemsFromStorage().length > 0 && referral_list.length) {
+	// 				this.setState({ referral_list: getReferralItem.getItemsFromStorage() });
+	// 			} else{ this.setState({ referral_list: getReferralItem.getItemsFromStorage() })
+
+	// 		}
+	// 	} 
+	// 	}catch (err) {
+	// 		console.log('An error occured');
+	// 	}
+	// }
 
 	handleOnChange = (e) => {
 		this.setState({ [e.target.name]: e.target.value }, () => {
