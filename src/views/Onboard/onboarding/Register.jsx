@@ -67,10 +67,12 @@ class Register extends Component {
 	async handleGetReferral() {
 		try {
 			const res = await axios.get(`${env.api}/misc/get-audiences`);
-			console.log(res.data.data);
+			if (res.data) {
+				console.log(res.data.data);
 
-			const referral_list = res.data.data;
-			return referral_list;
+				const referral_list = res.data.data;
+				return referral_list;
+			}
 		} catch (err) {
 			console.log('An error occured');
 		}
